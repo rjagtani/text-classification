@@ -15,7 +15,6 @@ if model_config['generate_features']:
     dataset,feature_names = build_modelling_dataset(dataset = dataset,mode= model_config['mode'], total_features = model_config['total_features'])
 else:
     feature_names = load_object(directory_config['root_dir'],directory_config['features_list_dir'],directory_config['features_list_object_name'] + ".pkl")
-dataset = dataset[:5000]
 final_clf,train_with_predictions,test_with_predictions = train_model(dataset,feature_names)
 
 
